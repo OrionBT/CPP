@@ -1,0 +1,32 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+void SwapVectorEnds(vector<int>& sortVector){
+   int holder = 0;
+   holder = sortVector.at(0);
+   int n = (sortVector.size() - 1);
+   sortVector.at(0) = sortVector.at(n);
+   sortVector.at(n) = holder;
+   return;
+}
+/* Your solution goes here  */
+
+int main() {
+   vector<int> sortVector(4);
+   int i = 0;
+
+   sortVector.at(0) = 10;
+   sortVector.at(1) = 20;
+   sortVector.at(2) = 30;
+   sortVector.at(3) = 40;
+
+   SwapVectorEnds(sortVector);
+
+   for (i = 0; i < sortVector.size(); ++i) {
+      cout << sortVector.at(i) << " ";
+   }
+   cout << endl;
+
+   return 0;
+}
