@@ -1,0 +1,74 @@
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+#include <vector>
+using namespace std;
+int main() {
+	const string studentData[] =
+
+	{ "A1,John,Smith,John1989@gm ail.com,20,30,35,40,SECURITY", "A2,Suzan,Erickson,Erickson_1990@gmailcom,19,50,30,40,NETWORK", "A3,Jack,Napoli,The_lawyer99yahoo.com,19,20,40,33,SOFTWARE", "A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY", "A5,Bradley,Timm,btimm1@wgu.edu,25,20,10,44,SOFTWARE" };
+
+	for (int i = 0; i < 5; i++) {
+		string student = studentData[i];
+		stringstream stream(student);
+		
+		if (row[0] == 'A')
+		{
+			this->classRosterArray[lastIndex] = new Student();
+		}
+		else
+		{
+			cerr<< "Invalid Student\n";
+			exit(-1);
+		}
+		while (stream.good()) {
+			vector<string> IDvec;
+			vector<string> firstNameVec;
+			vector<string> lastNameVec;
+			vector<string> emailVec;
+			vector<int> ageVec;
+			vector<int> daysInCourse1Vec;
+			vector<int> daysInCourse2Vec;
+			vector<int> daysInCourse3Vec;
+			vector<string> degreeProgramVec;
+			string studentID;
+			string firstName;
+			string lastName;
+			string emailAddress;
+			string ageStr;
+			string daysInCourse1str;
+			string daysInCourse2str;
+			string daysInCourse3str;
+			string degreeprogram;
+			getline(stream, studentID, ',');
+				IDvec.push_back(studentID);
+			getline(stream, firstName, ',');
+				firstNameVec.push_back(firstName);
+			getline(stream, lastName, ',');
+				lastNameVec.push_back(lastName);
+			getline(stream, emailAddress, ',');
+				emailVec.push_back(emailAddress);
+			getline(stream, ageStr, ',');
+				int age = stoi(ageStr);
+				ageVec.push_back(age);
+			getline(stream, daysInCourse1str, ',');
+				int daysInCourse1 = stoi(daysInCourse1str);
+				daysInCourse1Vec.push_back(daysInCourse1);
+			getline(stream, daysInCourse2str, ',');
+				int daysInCourse2 = stoi(daysInCourse2str);
+				daysInCourse2Vec.push_back(daysInCourse2);
+			getline(stream, daysInCourse3str, ',');
+				int daysInCourse3 = stoi(daysInCourse3str);
+				daysInCourse3Vec.push_back(daysInCourse3);
+			getline(stream, degreeprogram, ',');
+				degreeProgramVec.push_back(degreeprogram);
+
+			for (int j = 0; j < IDvec.size(); j++) {
+				cout << IDvec.at(j) <<" "<< firstNameVec.at(j)<<" "<<lastNameVec.at(j)<<" "<<emailVec.at(j)<<" "<<ageVec.at(j)<<" "<<daysInCourse1Vec.at(j)<<" "<<daysInCourse2Vec.at(j)<<" "<< daysInCourse3Vec.at(j)<<" "<< degreeProgramVec.at(j)<< endl;
+				
+			}
+			}
+	}
+	return 0;
+}
